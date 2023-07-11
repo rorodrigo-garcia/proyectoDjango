@@ -1,0 +1,12 @@
+{% extends 'usuario/usuario2.html' %}
+
+{% block FORM %}
+crear cliente
+{% endblock FORM %}
+{% block CONTENIDO %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock CONTENIDO %}
