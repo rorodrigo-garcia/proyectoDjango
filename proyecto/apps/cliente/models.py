@@ -13,4 +13,4 @@ class Cliente(models.Model):
     pais_origen_id=models.ForeignKey(Pais, on_delete= models.SET_NULL,null=True , blank=True)
     
     def __str__(self) -> str:
-        return f"{self.nombre} , {self.apellido}"
+        return f"{self.nombre} , {self.apellido},{self.nacimiento}"

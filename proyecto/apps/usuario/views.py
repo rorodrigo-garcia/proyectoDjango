@@ -5,3 +5,4 @@ from django.shortcuts import render
 def funcion(request):
     
     return render(request,"usuario/usuario.html")
+

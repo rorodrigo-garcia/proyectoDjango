@@ -6,10 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    
     <h1>Titulo</h1>
     <h2>  tu mama</h2>
     {% for cliente in clientes %}
-    <p> {{cliente.nombre}} </p>
+    <p> {{cliente.nombre}} {{cliente.apellido}}</p>
     {% endfor %}
+    
 </body>
 </html>

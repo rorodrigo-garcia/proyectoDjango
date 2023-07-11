@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> segndo usuario</h1>
+    {% extends 'cliente/index.html' %}
+    {% block contenido %}
+    esto es un contenido de prueba
+    {% endblock contenido %}
+    <a href=" {% url 'cliente:usuario' %}"> ir a clientes </a>
+    {% block NUEVO %}
+   
+    {% endblock NUEVO %}
+</body>
+</html> 
