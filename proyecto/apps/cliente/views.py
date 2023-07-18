@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Pais,Cliente
 from .forms import ClienteForm
 from django.http import HttpRequest,HttpResponse
+from datetime import date
 # Create your views here.
 
 def home(request):
@@ -34,6 +35,16 @@ def crear_form(request: HttpRequest) -> HttpResponse:
             form.save()
     else :
         form = ClienteForm()
-    
-    return render(request,"usuario/crear.html",{"form":form})
+    return render(request,"cliente/crear.html",{"form":form})
 
+def busqueda(request):
+    cliente_nombre = Cliente.objects.filter(nombre__contains="o")
+    cliente_nacimiento = Cliente.objects.filter(nacimiento__gt = date(2000,1,1))
+    contexto = {
+        "cliente_nombre": cliente_nombre,
+        "cliente_nacimiento" : cliente_nacimiento
+    }
+    return render(request,"cliente/busqueda.html", contexto)
+
+def templante(request):
+    return  render(request,'cliente/template2.html')

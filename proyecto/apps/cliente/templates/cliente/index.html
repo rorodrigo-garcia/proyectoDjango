@@ -9,9 +9,13 @@
     
     <h1>Titulo</h1>
     <h2>  tu mama</h2>
+    {% block CONTENIDO %}
+    {% endblock CONTENIDO %}
     {% for cliente in clientes %}
     <p> {{cliente.nombre}} {{cliente.apellido}}</p>
     {% endfor %}
-    
+   {% block FORM %}
+   {% endblock FORM %}
+   {% block BUSQUEDA %}{% endblock BUSQUEDA %}
 </body>
 </html>

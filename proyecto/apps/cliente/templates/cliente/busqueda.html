@@ -1,0 +1,16 @@
+{% extends 'cliente/index.html' %}
+
+{% block FORM %}
+busqueda
+{% endblock FORM %}
+{% block CONTENIDO %}
+  <h2> nombre del cliente </h2>
+  {% for cliente in cliente_nombre  %}
+    <p> {{cliente}} </p>
+  {% endfor %}
+{% block BUSQUEDA %}
+{% for cliente in cliente_nacimiento %}
+<p> {{cliente }} </p>
+{% endfor %}
+{% endblock BUSQUEDA %}
+{% endblock CONTENIDO %}

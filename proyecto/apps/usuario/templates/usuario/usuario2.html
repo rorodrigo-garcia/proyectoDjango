@@ -8,12 +8,11 @@
 <body>
     <h1> segndo usuario</h1>
     {% extends 'cliente/index.html' %}
-    {% block contenido %}
+    {% block CONTENIDO %}
     esto es un contenido de prueba
-    {% endblock contenido %}
+    {% endblock CONTENIDO %}
     <a href=" {% url 'cliente:usuario' %}"> ir a clientes </a>
     {% block NUEVO %}
-   
     {% endblock NUEVO %}
 </body>
 </html> 
