@@ -1,0 +1,11 @@
+{% extends 'cliente/template2.html' %}
+
+{% block CONTENIDO %}
+{% if {{categorias}} %}
+
+<p> hay elementos</p>
+{% else %}
+<p> no hay elementos </p> 
+{% endif %}
+<a href="{% url 'cliente:template' %}"> botoN </a>
+{% endblock CONTENIDO %}

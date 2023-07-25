@@ -13,6 +13,8 @@
         <link href="{% static 'cliente/css/styles.css' %}" rel="stylesheet" />
     </head>
     <body>
+        {% block CONTENIDO %}
+        {% endblock CONTENIDO %}
         <!-- Responsive navbar-->
         {% include 'cliente/nav.html' with titulo="titlo de la pagina" %}
         <!-- Page content-->
@@ -32,7 +34,7 @@
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
                         </header>
                         <!-- Preview image figure-->
-                        <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+                        <figure class="mb-4"><img class="img-fluid rounded" src={% static 'cliente/img/capitan-america-age-of-ultron.jpg' %} alt="..." /></figure>
                         <!-- Post content-->
                         <section class="mb-5">
                             <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe.</p>

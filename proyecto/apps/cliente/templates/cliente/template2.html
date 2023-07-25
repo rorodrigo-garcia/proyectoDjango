@@ -1,1 +1,5 @@
 {% extends 'cliente/template.html' %}
+{% block CONTENIDO %}
+<a href="{% url 'cliente:productoCategoria_list' %}">producto</a>
+<a href="{% url 'cliente:template' %}"> boton </a>
+{% endblock CONTENIDO %}

@@ -3,6 +3,7 @@ from .models import Pais,Cliente
 from .forms import ClienteForm
 from django.http import HttpRequest,HttpResponse
 from datetime import date
+from . import models
 # Create your views here.
 
 def home(request):
@@ -47,4 +48,10 @@ def busqueda(request):
     return render(request,"cliente/busqueda.html", contexto)
 
 def templante(request):
-    return  render(request,'cliente/template2.html')
+    contexto = {"app" : "categoria productos"}
+    return  render(request,'cliente/template2.html',contexto)
+
+def productoCategoria(request):
+    categorias = models.ProductoCategoria.objects.all()
+    contexto = {"categorias":categorias}
+    return render (request,"cliente/productoCategoria.html",contexto)

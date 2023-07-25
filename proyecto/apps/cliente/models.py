@@ -14,3 +14,13 @@ class Cliente(models.Model):
     
     def __str__(self) -> str:
         return f"{self.nombre} , {self.apellido},{self.nacimiento}"
+    
+class ProductoCategoria(models.Model):
+    nombre = models.CharField(max_length=50,unique=True)
+    descripcion =  models.TextField(max_length=250,null=True,blank=True,verbose_name="descripción")
+    
+    def __str__(self) -> str:
+        return self.nombre
+
+    class Meta:
+        verbose_name="categoría de productos"
